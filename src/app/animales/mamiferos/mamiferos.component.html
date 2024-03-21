@@ -1,0 +1,16 @@
+<h2>{{tipoAnimales}}</h2>
+<p>
+    {{mostrar()}}.
+</p>
+<p>Ejemplo:</p>
+<div *ngIf="(Animales.length > 0); else noExisteAnimales">
+    <h4>Lista de animales {{tipoAlimentacion}}</h4>
+    <ul>
+        <li *ngFor="let animal of Animales; let i=index">
+        {{animal}} ---- {{i}}
+    </li>
+    </ul>
+</div>
+<ng-template #noExisteAnimales>
+    <h4>No Hay ejemplo de animales {{tipoAlimentacion}} registrados</h4>
+     </ng-template>

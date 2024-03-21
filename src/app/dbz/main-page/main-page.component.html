@@ -1,0 +1,46 @@
+<h1>Bienvenidos  al mundo de Dragon Ball Z</h1>
+
+<div class="row">
+    <div class="col">
+        <h3>Personajes</h3>
+        <hr>
+        <ul>
+           <ol *ngFor="let item of personajes">
+               nombre: {{item.nombre}}  poder:{{item.poder | number}}
+           </ol>
+        </ul>
+    </div>
+    <div class="col">
+        <h3>agregar</h3>
+        <p>Personaje : {{nuevo.nombre}}</p>
+        <hr>
+        <form (ngSubmit)="guardar()">
+            <input 
+            type="text"
+             placeholder="Nombre"
+             name="nombre"
+             [(ngModel)]="nuevo.nombre"
+             >
+            <input type="number"
+             placeholder="Poder"
+             name="poder"
+             [(ngModel)]="nuevo.poder"
+             >
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+    
+    <div class="col">
+        <button (click)="ejemplo($event)">Ejemplo evento</button>
+
+    </div>
+</div>
+
+
+<!-- 
+<input type="number"
+placeholder="Poder"
+[value]="nuevo.poder"
+(input)="cambiarNombre($event)" 
+>
+ -->

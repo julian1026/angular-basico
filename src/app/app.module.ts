@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {HeroesModule} from './heroes/heroes.module';
 import {ContadorMudule} from './contador/contador.module';
+import {AnimalesModule}  from './animales/animales.module';
+import { DbzModule } from './dbz/dbz.module';
+import { PkmModule } from './pkm/pkm.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -11,7 +14,10 @@ import {ContadorMudule} from './contador/contador.module';
   imports: [
     BrowserModule,
     HeroesModule,
-    ContadorMudule
+    ContadorMudule,
+    AnimalesModule,
+    DbzModule,
+    PkmModule
   ],
   providers: [],
   bootstrap: [AppComponent]
